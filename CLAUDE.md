@@ -150,16 +150,24 @@ Claude는 스스로 일할 수 있게 도와주는 코치입니다.
 
 ---
 
-## 교시 시작 방법
+## 실습 시작 방법
 
 수업을 시작할 때는 Claude Code에서 아래 명령을 입력하세요.
 
-```text
-/start-mw4-1
-```
+| 명령 | 실습 내용 |
+|------|----------|
+| `/start-practice-01` | 설치와 연결 (VSCode + Claude Code + 로그인 + 첫 대화) |
+| `/start-practice-02` | 플러그인 설치 + student-profile.md 생성 + 첫 Git |
+| `/start-practice-03` | 도구 탐색 (capabilities tour + my-installed-tools.md) |
+| `/start-practice-04` | 부서별 데이터 분석 |
+| `/start-practice-05` | 결과 다듬기 + 저장 |
+| `/start-practice-06` | CLAUDE.md 규칙 설계 (Always / Ask / Never) |
+| `/start-practice-07` | 구조가 결과를 바꾼다 (3층 비교 + 프롬프트 4법칙) |
+| `/start-practice-08` | 부서별 통합 파이프라인 (Plan 모드 + 멀티파일) |
+| `/start-practice-09` | 배포와 공유 (HTML 대시보드 + Vercel) |
 
-이 명령은 MW4 1교시의 시작점입니다.
-환경 점검, 첫 실습, 기본 사용 흐름을 따라갈 수 있도록 안내합니다.
+각 실습은 독립적인 단위입니다.
+강사가 안내하는 순서대로 진행하면 됩니다.
 
 준비가 덜 되어 있어도 괜찮습니다.
 중요한 것은 완벽하게 아는 것이 아니라, 지금 바로 시작하는 것입니다.
