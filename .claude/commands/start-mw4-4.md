@@ -1,10 +1,11 @@
 ---
-description: MW4 4교시 시작
+description: MW4 4교시 시작 - practical extension
 allowedTools: Read, Write, Bash, Glob, Grep, AskUserQuestion
 ---
 $ARGUMENTS
 
 Read("course-structure.json")
+Read("student-profile.md")
 Read("lesson-modules/mw4-4-demo-present/CLAUDE.md")
 Read(".claude/SCRIPT_INSTRUCTIONS.md")
 

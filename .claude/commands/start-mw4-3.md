@@ -1,10 +1,11 @@
 ---
-description: MW4 3교시 시작
+description: MW4 3교시 시작 - installed capabilities tour
 allowedTools: Read, Write, Bash, Glob, Grep, AskUserQuestion
 ---
 $ARGUMENTS
 
 Read("course-structure.json")
+Read("student-profile.md")
 Read("lesson-modules/mw4-3-dept-practice/CLAUDE.md")
 Read(".claude/SCRIPT_INSTRUCTIONS.md")
 

@@ -15,7 +15,7 @@ disable-model-invocation: true
 | 교시 | 시간 | 내용 | 핵심 |
 |------|------|------|------|
 | 1교시 | 08:00~08:45 | MW4 복습(10분) + CLAUDE.md 심화(Always/Ask/Never) + 부서별 고도화 | CLAUDE.md 실전 수준 완성 |
-| 2교시 | 09:00~09:45 | CMG 3층 Engineering(A/B/C 비교) + /prompt 체험 + 강사시연(superpowers vs show-me-the-prd) | "구조가 결과를 바꾼다" 심화 |
+| 2교시 | 09:00~09:45 | MW4의 plugin/skill literacy 위에 CMG 3층 Engineering(A/B/C 비교) + /prompt 체험 + 강사시연(superpowers vs show-me-the-prd) | "구조가 결과를 바꾼다" 심화 |
 | 3교시 | 10:00~10:45 | 부서별 심화 파이프라인 (멀티파일 + Plan 모드) | 통합 분석 결과물 |
 | 4교시 | 11:00~11:45 | GitHub push + Vercel 배포 + 결과 발표 + MW6 예고 | 배포 URL 완성 |
 
@@ -24,7 +24,7 @@ disable-model-invocation: true
 ## 1교시 (45분): MW4 복습 + CLAUDE.md 심화 + 부서별 고도화
 
 ### [Audience Hook] (2분)
-> "지난주에 CLAUDE.md를 /init으로 만들었죠? 오늘은 그걸 '실전 수준'으로 올립니다. AI가 언제 물어보고, 언제 스스로 하는지 규칙을 설계합니다."
+> "지난주 MW4에서는 student-profile.md로 나를 알려주고, gptaku+tofukyung plugin 흐름과 using-superpowers 입문을 직접 만지면서 '도구를 아는 것'이 결과를 바꾼다는 감각을 익혔죠. 또 student-profile.md는 나를 설명하는 파일, CLAUDE.md는 AI의 작업 규칙 파일이라는 차이도 확인했습니다. 오늘은 그 CLAUDE.md를 '실전 수준'으로 올립니다. AI가 언제 물어보고, 언제 스스로 하는지 규칙을 설계합니다."
 
 ---
 
@@ -39,16 +39,17 @@ disable-model-invocation: true
 "저장해줘" → commit → "올려줘" → GitHub 확인
 ```
 
-**복습 2: CLAUDE.md 확인**
+**복습 2: plugin/skill literacy + student-profile.md/CLAUDE.md 역할 구분 확인**
 ```
-"CLAUDE.md 파일 열어서 보여줘" → 지난주 만든 기초 규칙 확인
+"MW4에서 설치한 gptaku plugin, tofukyung plugin, using-superpowers가 각각 어떤 역할이었는지 먼저 정리해줘"
+"student-profile.md와 CLAUDE.md의 차이를 설명해줘" → 지난주 만든 개인화 파일과 규칙 파일의 역할 확인
 ```
 
 ---
 
 ### 강사 스크립트: CLAUDE.md 심화 — Always/Ask/Never 구조 (15분) — Sec08, CMG Ch05
 
-> "지난주에 /init으로 CLAUDE.md 기초를 만들었죠. 그런데 AI가 '항상 해야 할 것', '물어봐야 할 것', '절대 하면 안 될 것'을 구분하면 훨씬 강력해집니다."
+> "지난주 MW4에서는 student-profile.md로 나를 알려주고, plugin 흐름을 직접 만지고, 모델·effort 감각도 익혔죠. 또 student-profile.md는 나를 설명하는 파일, CLAUDE.md는 AI의 작업 규칙 파일이라는 차이도 확인했습니다. 이제 AI가 '항상 해야 할 것', '물어봐야 할 것', '절대 하면 안 될 것'을 구분하면 훨씬 강력해집니다."
 
 **Always/Ask/Never 구조 (CMG Ch06 확장 순서 기반)**
 
@@ -77,9 +78,9 @@ disable-model-invocation: true
 **공통 시작:**
 ```
 Claude Code 패널에 입력:
-"/init"
-→ 현재 폴더 구조 분석 후 CLAUDE.md 초안 자동 생성
-→ 생성된 파일을 VSCode에서 열기
+"student-profile.md와 CLAUDE.md를 함께 참고해서, 기존 CLAUDE.md가 있으면 다듬고 없으면 새로 만들어 Always / Ask / Never 구조로 정리 시작해줘"
+→ 개인화 파일과 규칙 파일을 함께 읽게 함
+→ 정리된 CLAUDE.md를 VSCode에서 열기
 ```
 
 **부서별 커스터마이징 가이드:**
@@ -153,12 +154,12 @@ CAE 시뮬레이션 결과 분석 및 배터리 안전성 검토.
 - 금액 단위: 백만원 (예: 12.5백만원)
 ```
 
-> AskUserQuestion 포인트: "CLAUDE.md 저장하셨나요? 지금 Claude Code 패널에 'CLAUDE.md 읽었어?'라고 입력해보세요."
+강사 확인 포인트: "CLAUDE.md 저장하셨나요? 지금 Claude Code 패널에 'student-profile.md와 CLAUDE.md 차이를 설명해줘'라고 입력해보세요."
 
 ```
 확인 명령:
-"CLAUDE.md를 읽었어? 우리 팀 불량률 표기 방식이 뭐야?"
-→ 내용을 정확히 답변하면 성공
+"student-profile.md와 CLAUDE.md의 차이를 설명해줘"
+→ 역할 차이를 정확히 답변하면 성공
 ```
 
 ### [Transition] 1교시 → 2교시
@@ -181,7 +182,7 @@ CAE 시뮬레이션 결과 분석 및 배터리 안전성 검토.
 
 ### 강사 스크립트: CMG Ch05 3층 비교 실험 (8분)
 
-> "같은 모델인데 왜 결과가 다른가? 이건 모델의 차이가 아니에요. 구조의 차이입니다."
+> "같은 모델인데 왜 결과가 다른가? 이건 모델의 차이가 아니에요. MW4에서 이미 본 것처럼 plugin과 skill을 아는지, 그리고 구조를 갖췄는지의 차이입니다."
 
 **라이브 실험: A / B / C 비교**
 
