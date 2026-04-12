@@ -79,6 +79,18 @@ pull 해줘
 
 → MW6 practice 파일 수신
 
+**⚠️ git pull 충돌 처리 (Claude Code 자동 수행)**:
+MW5에서 수강생이 CLAUDE.md 등을 직접 수정했으므로 충돌 가능.
+충돌 발생 시 아래 순서로 자동 처리:
+
+1. 수강생 로컬 변경사항 먼저 커밋: `git add -A && git commit -m "MW5 작업 저장"`
+2. `git pull --no-rebase` 실행
+3. 충돌 파일별 처리:
+   - **시스템 파일** (CLAUDE.md, NAVIGATION.md, course-structure.json, .claude/ 하위): **서버 버전 수용** (`git checkout --theirs`)
+   - **수강생 작업 파일** (student-profile.md, analysis/, organized/, reviews/): **수강생 버전 유지** (`git checkout --ours`)
+4. `git add -A && git commit -m "MW6 업데이트 병합"`
+5. 수강생에게 "새 파일 받기 완료!" 안내
+
 **강사 멘트 (오프닝 스크립트 사용 후)**:
 > "시작 전에 한 가지. 오늘부터 새로운 도구를 쓸 건데요,
 > 혹시 뭐가 안 되면 절대 당황하지 마세요.
@@ -341,7 +353,8 @@ pull 해줘
 | 옵시디언 실행 안 됨 | 설치 누락 | 보조강사가 USB에서 설치 |
 | "Open folder as vault" 못 찾음 | UI 영문 → 혼란 | 강사 화면 공유 + 위치 지시 |
 | vault 열었는데 빈 화면 | lesson-a 폴더가 아닌 다른 폴더 열음 | 올바른 폴더 경로 재안내 |
-| git pull 실패 | 네트워크 또는 인증 문제 | MW5에서 push 했으면 로컬에 파일 있음 → pull 실패해도 기존 파일로 진행 가능 |
+| git pull 충돌 | MW5에서 CLAUDE.md 등 수정 | Claude Code가 자동 병합 (Step 0 참조). 수강생 작업 보존 + 서버 업데이트 수용 |
+| git pull 네트워크 실패 | 인증 만료 또는 Wi-Fi | 보조강사가 USB에서 zip 배포 → 수동 복사 |
 
 ---
 
