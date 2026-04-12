@@ -21,7 +21,8 @@
       "Write(**)",
       "Edit(**)",
       "Glob(**)",
-      "Grep(**)"
+      "Grep(**)",
+      "mcp__obsidian__*"
     ],
     "deny": [
       "Bash(rm -rf:*)",
