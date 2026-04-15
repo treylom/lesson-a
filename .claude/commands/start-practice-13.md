@@ -39,16 +39,15 @@ Write/Read 도구는 MCP가 실패했을 때만 폴백으로 사용합니다.
 Practice 13 실습 중 외부 자료 수집 단계에서, 아래 3개 링크를 /knowledge-manager-lite로 처리하는 실습을 **반드시** 진행하세요:
 
 1. **Anthropic 최신 연구**: https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic
-   → "이 글을 '빠르게' 요약해서 External-Research/Anthropic/ 폴더에 저장해줘"
+   → "이 글을 요약해서 External-Research/Anthropic/ 폴더에 저장해줘"
 
 2. **OpenAI 개발자 블로그**: https://developers.openai.com/blog/openai-for-developers-2025
-   → "이 글을 '빠르게' 요약해서 External-Research/OpenAI/ 폴더에 저장해줘"
+   → "이 글을 요약해서 External-Research/OpenAI/ 폴더에 저장해줘"
 
 3. **Google DeepMind 최신 연구**: https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/
-   → "이 글을 '빠르게' 요약해서 External-Research/DeepMind/ 폴더에 저장해줘"
+   → "이 글을 요약해서 External-Research/DeepMind/ 폴더에 저장해줘"
 
 수강생에게 위 프롬프트를 하나씩 복사해서 입력하게 안내합니다.
-**"빠르게" 키워드를 빼먹지 않도록 강조하세요** — 토큰 절약에 중요합니다.
 각 결과가 vault에 저장되면 옵시디언 사이드바에서 External-Research/ 폴더가 생겼는지 확인하게 합니다.
 
 ### 추가 아카이빙 실습 — 제조업 분야 (수강생이 골라서 2-3개 선택)
@@ -76,7 +75,7 @@ Practice 13 실습 중 외부 자료 수집 단계에서, 아래 3개 링크를 
 | 14 | K-배터리 3중 충격 (한경) | https://magazine.hankyung.com/business/article/202505282219b | LG에너지솔루션·삼성SDI·SK온 점유율 하락, CATL·BYD 추월 |
 | 15 | 디지털 트윈 엣지 AI 논문 (Nature) | https://www.nature.com/articles/s41598-025-28466-9 | 엣지 AI+페더레이션 러닝 기반 실시간 디지털 트윈 |
 
-**선택 후 프롬프트**: "이 글을 '빠르게' 요약해서 External-Research/제조업/ 폴더에 저장해줘: [선택한 URL]"
+**선택 후 프롬프트**: "이 글을 요약해서 External-Research/제조업/ 폴더에 저장해줘: [선택한 URL]"
 
 ### 추가 아카이빙 실습 — AI 분야 (수강생이 골라서 2-3개 선택)
 
@@ -98,13 +97,13 @@ Practice 13 실습 중 외부 자료 수집 단계에서, 아래 3개 링크를 
 | 14 | EU AI Act 공식 | https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai | 위험 기반 분류, 2026년 전체 적용, 벌금 최대 EUR 35M |
 | 15 | NVIDIA 한국 AI 인프라 구축 | https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-South-Korea-Government-and-Industrial-Giants-Build-AI-Infrastructure-and-Ecosystem-to-Fuel-Korea-Innovation-Industries-and-Jobs/default.aspx | 한국 정부+NVIDIA 협력, 50,000+ GPU, 네이버·카카오·업스테이지 |
 
-**선택 후 프롬프트**: "이 글을 '빠르게' 요약해서 External-Research/AI/ 폴더에 저장해줘: [선택한 URL]"
+**선택 후 프롬프트**: "이 글을 요약해서 External-Research/AI/ 폴더에 저장해줘: [선택한 URL]"
 
 ### 연결 확인 실습 (아카이빙 완료 후)
 모든 아카이빙이 끝나면, vault 통합 정리 + 연결 확인:
 
 ```
-/knowledge-manager-lite 빠르게 vault 전체를 정리하고 INDEX.md를 업데이트해줘
+/knowledge-manager-lite vault 전체를 정리하고 INDEX.md를 업데이트해줘
 ```
 
 ⏳ 1-3분 걸립니다. "AI가 모든 파일의 연결 관계를 분석 중이에요."
