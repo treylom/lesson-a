@@ -38,14 +38,14 @@ Write/Read 도구는 MCP가 실패했을 때만 폴백으로 사용합니다.
 ### 외부 리서치 실습 (필수 — 건너뛰지 말 것)
 Practice 13 실습 중 외부 자료 수집 단계에서, 아래 3개 링크를 /knowledge-manager-lite로 처리하는 실습을 **반드시** 진행하세요:
 
-1. **Anthropic 최신 연구**: https://www.anthropic.com/research
-   → "이 페이지에서 가장 최근 글 하나를 '빠르게' 요약해서 External-Research/Anthropic/ 폴더에 저장해줘"
+1. **Anthropic 최신 연구**: https://www.anthropic.com/research/how-ai-is-transforming-work-at-anthropic
+   → "이 글을 '빠르게' 요약해서 External-Research/Anthropic/ 폴더에 저장해줘"
 
-2. **OpenAI 최신 블로그**: https://openai.com/blog
-   → "이 페이지에서 가장 최근 글 하나를 '빠르게' 요약해서 External-Research/OpenAI/ 폴더에 저장해줘"
+2. **OpenAI 개발자 블로그**: https://developers.openai.com/blog/openai-for-developers-2025
+   → "이 글을 '빠르게' 요약해서 External-Research/OpenAI/ 폴더에 저장해줘"
 
-3. **Google DeepMind 최신 연구**: https://deepmind.google/discover/blog/
-   → "이 페이지에서 가장 최근 글 하나를 '빠르게' 요약해서 External-Research/DeepMind/ 폴더에 저장해줘"
+3. **Google DeepMind 최신 연구**: https://deepmind.google/blog/accelerating-mathematical-and-scientific-discovery-with-gemini-deep-think/
+   → "이 글을 '빠르게' 요약해서 External-Research/DeepMind/ 폴더에 저장해줘"
 
 수강생에게 위 프롬프트를 하나씩 복사해서 입력하게 안내합니다.
 **"빠르게" 키워드를 빼먹지 않도록 강조하세요** — 토큰 절약에 중요합니다.
