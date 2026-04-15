@@ -1,10 +1,25 @@
 ---
 description: Practice 11 — 옵시디언 소개 + 첫 vault (MW6 1교시)
-allowedTools: Read, Write, Bash, Glob, Grep, AskUserQuestion
+allowedTools: Read, Write, Bash, Glob, Grep, AskUserQuestion, mcp__obsidian__*
 ---
 $ARGUMENTS
 
 Bash("git pull")
+
+## Obsidian MCP 설치 확인 (MW6 필수 — 첫 교시에서 설정)
+.claude/settings.json을 읽고, mcpServers.obsidian 설정이 있는지 확인하세요.
+없으면 아래 설정을 .claude/settings.json의 mcpServers에 추가합니다:
+```json
+"obsidian": {
+  "command": "npx",
+  "args": ["-y", "obsidian-mcp@1.0.6"],
+  "env": {
+    "OBSIDIAN_VAULT_PATH": "."
+  }
+}
+```
+설정 추가 후 수강생에게 "옵시디언 연결을 설정했습니다. MW6 실습에서 사용할 거예요."라고 안내합니다.
+이미 있으면 "옵시디언 연결 확인 완료"라고 안내합니다.
 
 Read("course-structure.json")
 Read("student-profile.md")

@@ -289,10 +289,10 @@ Claude Code가 파일을 만들었다고 하면 옵시디언 사이드바가 1-2
 ```
 시연 1: 옵시디언에서 student-profile.md 열기 → 즉시 열림
 시연 2: 같은 내용을 노션 페이지에서 열기 → 로딩 시간 체감
-시연 3: Claude Code에서 "@student-profile.md 읽어줘" → 옵시디언 vault에서 즉시 읽음
+시연 3: Claude Code에서 "student-profile.md 읽어줘" → 같은 폴더이므로 즉시 읽음
 ```
 
-> "보셨죠? Claude Code가 '@' 하나로 바로 파일을 읽어요.
+> "보셨죠? Claude Code가 같은 폴더에 있는 파일을 바로 읽어요.
 > 노션이었으면 '노션 API 설정하세요, MCP 연결하세요' 이런 과정이 필요해요.
 > 옵시디언은 그냥 폴더니까 → Claude Code가 바로 읽어요.
 >
@@ -300,7 +300,7 @@ Claude Code가 파일을 만들었다고 하면 옵시디언 사이드바가 1-2
 > 가장 쉬운 경로 = 폴더 + .md + 옵시디언."
 
 **백업 슬롯 (Type C — 시간 버퍼)**:
-- 시연이 빨리 끝나면 → "본인 PC에서도 '@student-profile.md 읽어줘' 해보세요" 안내
+- 시연이 빨리 끝나면 → "본인 PC에서도 'student-profile.md 읽어줘' 해보세요" 안내
 
 ---
 
