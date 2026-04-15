@@ -40,6 +40,10 @@ allowed-tools: Read, Write, Bash, Glob, Grep, AskUserQuestion
 | `/start-practice-08` | 부서별 통합 파이프라인 (Plan + /using-superpowers) |
 | `/start-practice-09` | 하네스 엔지니어링 + 나만의 스킬 + MW6 예고 |
 | `/start-practice-SPARE` | [스페어] Vercel 배포 (시간 여유 시) |
+| `/start-practice-11` | 옵시디언 소개 + 첫 vault (MW6 1교시) |
+| `/start-practice-12` | vault 구조 결정 + NAVIGATION.md (MW6 2교시) |
+| `/start-practice-13` | 1-5주차 위키 자동 정리 + ChatGPT/Gemini 비교 (MW6 3교시) |
+| `/start-practice-14` | 서브에이전트 + 토큰 절약 + MW7 예고 (MW6 4교시) |
 
 ## references/ 구조
 - `references/company-context.md` — 회사 배경, 수강생 환경, 실무 맥락
