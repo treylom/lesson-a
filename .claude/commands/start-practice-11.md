@@ -26,5 +26,9 @@ Read("student-profile.md")
 Read("lesson-modules/practice-11-obsidian-intro/CLAUDE.md")
 Read(".claude/SCRIPT_INSTRUCTIONS.md")
 
+## Obsidian MCP 우선 사용
+파일 생성, 검색, vault 조작 시 **반드시 Obsidian MCP 도구(mcp__obsidian__*)를 우선 사용**하세요.
+Write/Read 도구는 MCP가 실패했을 때만 폴백으로 사용합니다.
+
 위 파일을 순서대로 읽고, student-profile.md가 있으면 수강생 이름/부서/업무를 파악한 뒤, Practice 11을 즉시 시작하세요.
 git pull 충돌이 생기면 "강사에게 손을 들어 알려주세요"라고 안내합니다.
