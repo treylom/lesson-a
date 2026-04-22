@@ -15,7 +15,7 @@ MW7은 MW4-6에서 배운 모든 도구를 **본인 업무에 직접 적용**하
 - 10개 과제 중 **본인 부서에 맞는 1개**를 선택합니다
 - Level 1 달성이 전원 목표입니다 (수업 가용 75분 기준)
 - Level 2, Level 3은 시간이 남는 사람이 이어서 진행합니다
-- 팀별 발표는 없습니다. 결과물 URL을 **Google Sheets 공용 시트**에 올리는 것으로 마무리합니다
+- 팀별 발표는 없습니다. 결과물 URL을 **[Google Sheets 공용 시트](https://docs.google.com/spreadsheets/d/1G4x7lcPy7IWsgr28rtIMAVsI4IO8rUxDoPbtkcTXEBc/edit?usp=drivesdk)** 에 올리는 것으로 마무리합니다
 - 강사가 시연 직전 1~2분간 시트를 띄워 부서별 흐름만 가볍게 훑습니다 (개인 발표·개별 평가 없음)
 
 **이 실습에서 Claude가 하는 역할:**
@@ -169,7 +169,9 @@ Level 3 완료의 의미: 본인 업무에 쓸 수 있는 수준으로 확장했
 
 ## Google Sheets 공용 시트
 
-강사가 수업 시작 시 공유 링크(또는 QR)를 띄웁니다. 본인 번호 행에 아래 3가지만 채워 주세요.
+**공유 링크**: https://docs.google.com/spreadsheets/d/1G4x7lcPy7IWsgr28rtIMAVsI4IO8rUxDoPbtkcTXEBc/edit?usp=drivesdk
+
+강사가 수업 시작 시 위 링크(또는 QR)를 띄웁니다. 본인 번호 행에 아래 3가지만 채워 주세요.
 
 | 번호 | 닉네임 (익명 가능) | 결과물 링크 | 사진 |
 |------|------------------|-----------|------|
