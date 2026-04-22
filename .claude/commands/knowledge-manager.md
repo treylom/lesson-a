@@ -352,26 +352,6 @@ Main이 입력 소스를 직접 추출합니다. 스킬 참조: `km-content-extr
 
 ## STEP 3: Vault 탐색 (Main 직접 - 순차)
 
-### Phase A0: MOC 우선 탐색 (2026-04-21 재경님 규율)
-
-> **"상위 MOC부터 보도록."** 원자 노트보다 상위 MOC를 먼저 식별해
-> (1) 기존 카테고리 파악 + (2) 새 노트의 parent 후보 선확정.
-
-```
-1. MOC 후보군 수집 (vault 전역):
-   - Grep frontmatter type: `grep -rlE '^type:.*-?MOC' {vault_path}/Library/`
-   - Grep tags MOC: `grep -rlE '^\s*-\s*MOC\b|MOC/' {vault_path}/Library/`
-   - 파일명 규칙: find "{vault_path}/Library/" -name "*-MOC*.md"
-
-2. 관련도 점수 계산 (각 후보 MOC에 대해):
-   - 작성자 일치 (MOC.author == 새 콘텐츠 author) → +3
-   - 태그 교집합 → +2 per tag
-   - 주제 키워드 부분 일치 → +1
-
-3. 상위 5개 MOC를 `candidate_parent_mocs`에 저장
-   → STEP 4.5 lint 규칙 4(connections) + STEP 5-0-PLUS + STEP 5.5-0에서 활용
-```
-
 ### Phase A: 그래프 탐색 (graph-navigator 로직)
 
 ```
@@ -752,36 +732,6 @@ NO → Library/ 하위 (기본):
 3. tags에 "tofukyung" 포함 → Mine/
 4. 위 해당 없음 → Library/
 
-### 5-0-PLUS. 기존 상위 MOC parent 자동 등록 (2026-04-21 재경님 규율)
-
-> **"하나의 문서, 복수 MOC 소속."** Phase A0 `candidate_parent_mocs` 중
-> 작성자·주제와 일치하는 MOC를 새 노트 frontmatter `parent` 필드에 복수 등록.
-
-```
-IF len(candidate_parent_mocs) > 0:
-  matched_mocs = [moc for moc in candidate_parent_mocs if moc.score >= 3]
-  # 기준: 작성자 일치(+3) 또는 태그 2개+ 일치
-
-  IF len(matched_mocs) > 0:
-    # 최대 3개까지 복수 소속 허용
-    new_note.frontmatter.parent = [
-      f'"[[{moc.name}]]"' for moc in matched_mocs[:3]
-    ]
-    # YAML 다중값 예시:
-    # parent:
-    #   - "[[기초부터-시작하는-AI생활-specal1849-MOC]]"
-    #   - "[[specal1849-전체-MOC]]"
-  ELSE:
-    # 딱 맞는 상위 MOC 없음 → STEP 4.5 lint 규칙 3 "Suggest new articles"
-    # 에서 "작성자/주제 허브 MOC 신설" 자동 제안
-    lint_suggestions.append({
-      "type": "new_hub_moc",
-      "reason": "저자·주제 일치 상위 MOC 부재 — 신설 고려"
-    })
-```
-
-**실제 적용 근거**: 2026-04-21 specal1849 임베딩편 저장 시 이 규율로 parent 2개(카테고리 + 작성자 허브) 소속 구조 완성.
-
 ### 5-2. 3-tier 구조 (해당 시)
 
 3-tier 선택 시 다음 순서로 생성:
@@ -830,28 +780,6 @@ IF len(candidate_parent_mocs) > 0:
 > **Karpathy 핵심: "단일 소스가 10-15개 기존 위키 페이지를 터치한다."**
 > 새 노트를 생성하는 것만으로는 지식이 복리로 쌓이지 않는다.
 > 기존 노트에 새 정보를 반영해야 위키가 compounding artifact가 된다.
-
-### 5.5-0. 상위 MOC 역링크 자동 추가 (2026-04-21 재경님 규율)
-
-> 새 노트가 `parent` 필드로 등록한 상위 MOC에 역방향 wikilink 등록. 중복 방지.
-
-```
-FOR EACH parent_moc IN new_note.frontmatter.parent:
-  1. parent_moc 파일 Read
-  2. 적절한 섹션 탐색 (우선순위):
-     - "## 📚 시리즈 구성" 또는 "## 📖 원자 노트"
-     - "## 🗺️ 시리즈 MOC" (작성자 허브 MOC용)
-     - "## 관련 노트"
-     - 섹션 미발견 시: 파일 끝에 "## 📎 자동 등록 노트" 섹션 신설
-  3. 중복 체크: 기존 내용에 `[[{new_note_name}]]` 존재 여부 → 있으면 skip
-  4. append:
-     - 시리즈/카테고리 MOC: "- [[{new_note_name}]] — {한 줄 설명}"
-     - 작성자 허브 MOC: "- {한 줄 설명} — [[{new_note_name}]]"
-  5. parent_moc frontmatter `graph_connections`에
-     `"{new_note_name} (contains)"` 추가 (기존 리스트에 append)
-```
-
-**실제 적용 근거**: 2026-04-21 specal1849 허브 구축 시 이 규율로 6개 MOC에 parent 역링크 전파. 수동 수행을 자동화로 승격.
 
 ### 5.5-1. 핵심 엔티티/개념 추출
 

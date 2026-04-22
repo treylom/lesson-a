@@ -831,8 +831,3 @@ AI 모델명 작성 시:
 ---
 
 **Ready to process knowledge from any source and export to any format!**
-
-## Auto-Learned Patterns
-
-- [2026-04-05] agent-office/km-tools/는 완전한 pytest 테스트 스위트를 갖춤 (test_diff.py, test_lint.py, test_state.py, test_cli.py). km-tools 코드 변경 시 `cd agent-office/km-tools && python -m pytest` 실행으로 검증 필수 (source: 2026-04-05-2207)
-- [2026-04-05] km-tools state 파일(km-YYYY-MM-DDTHHmm.json)은 세션마다 자동 생성됨. git commit 시 포함되나 실질적 기능 변경은 아님 — state 파일만 변경된 세션은 스킬 패치 불필요 (source: 2026-04-05-1304)
